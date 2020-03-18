@@ -1,0 +1,26 @@
+{
+  "name": "debug",
+  "version": "1.0.0",
+  "description": "Curso de NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thiago18l/NodeJS.git"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "@Thiago Lopes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thiago18l/NodeJS/issues"
+  },
+  "homepage": "https://github.com/Thiago18l/NodeJS#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
