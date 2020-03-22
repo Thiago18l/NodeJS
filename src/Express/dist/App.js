@@ -3,15 +3,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+// this app is defined to assign routes.
 var express_1 = __importDefault(require("express"));
-var app = express_1.default();
+var body_parser_1 = __importDefault(require("body-parser"));
+var Admin_1 = __importDefault(require("./routes/Admin"));
+var Shop_1 = __importDefault(require("./routes/Shop"));
 var PORT = process.env.PORT || 3000;
-app.use('/add-product', function (req, res, next) {
-    res.send("<h1>Add Product page </h1>");
-}); // handling different routes
-app.use('/', function (req, res, next) {
-    res.send("<h1> Home page</h1>");
-});
+var app = express_1.default();
+app.use(body_parser_1.default.urlencoded({ extended: true }));
+app.use(Admin_1.default);
+app.use(Shop_1.default);
 app.listen(PORT, function () {
     console.log("Running on port " + PORT);
 });
