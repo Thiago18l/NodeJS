@@ -5,7 +5,7 @@ import { Router } from 'express';
 const routes = Router();
 
 routes.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '../','views', 'shop.html'));
+    res.sendFile(path.join(__dirname, '..','views', 'shop.html'));
 });
 
 

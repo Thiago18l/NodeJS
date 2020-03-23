@@ -6,7 +6,7 @@ const routes = Router();
 
 routes.get('/add-product', (req, res, next) => {
     console.log('In product view');
-    res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
+    res.sendFile(path.join(__dirname, '..', 'views', 'add-product.html'));
     
 
 });
