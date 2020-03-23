@@ -13,6 +13,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/Admin', AdminRoutes);
 app.use(ShopRoutes);
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
     res.status(404).sendFile(path.join(__dirname, './', 'views', 'page404.html'));
