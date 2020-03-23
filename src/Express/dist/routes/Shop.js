@@ -12,6 +12,6 @@ var path = __importStar(require("path"));
 var express_1 = require("express");
 var routes = express_1.Router();
 routes.get('/', function (req, res, next) {
-    res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
+    res.sendFile(path.join(__dirname, '..', 'views', 'shop.html'));
 });
 exports.default = routes;
