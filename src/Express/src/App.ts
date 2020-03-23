@@ -1,6 +1,9 @@
 // this app is defined to assign routes.
 import express from 'express';
 import bodyParser from 'body-parser';
+import * as path from 'path';
+
+// import components
 import AdminRoutes from './routes/Admin';
 import ShopRoutes from './routes/Shop';
 
@@ -12,7 +15,7 @@ app.use('/Admin', AdminRoutes);
 app.use(ShopRoutes);
 
 app.use((req, res, next) => {
-    res.status(404).send('<h1> Page not found </h1>');
+    res.status(404).sendFile(path.join(__dirname, './', 'views', 'page404.html'));
 })
 
 app.listen(PORT, () => {
