@@ -11,8 +11,11 @@ var Shop_1 = __importDefault(require("./routes/Shop"));
 var PORT = process.env.PORT || 3000;
 var app = express_1.default();
 app.use(body_parser_1.default.urlencoded({ extended: true }));
-app.use(Admin_1.default);
+app.use('/Admin', Admin_1.default);
 app.use(Shop_1.default);
+app.use(function (req, res, next) {
+    res.status(404).send('<h1> Page not found </h1>');
+});
 app.listen(PORT, function () {
     console.log("Running on port " + PORT);
 });
